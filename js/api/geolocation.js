@@ -17,7 +17,7 @@
         });
 
         var onSuccess = function(position) {
-            console.log(position);
+            alert('We can reach Google - ' + position);
             var latlng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
 
             var marker = new google.maps.Marker({
@@ -29,7 +29,7 @@
         };
 
         var onFail = function() {
-            console.log('Failed to get geolocation');
+            alert('Failed to get geolocation');
         };
 
         navigator.geolocation.getCurrentPosition(onSuccess, onFail);
