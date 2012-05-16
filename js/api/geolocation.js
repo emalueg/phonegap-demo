@@ -17,7 +17,7 @@
         });
 
         var onSuccess = function(position) {
-            alert('We can reach Google - ' + position);
+            alert('We can reach Google - Lat=' + position.coords.latitude + ", Lon=" + position.coords.longitude);
             var latlng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
 
             var marker = new google.maps.Marker({
