@@ -20,12 +20,16 @@
             alert('We can reach Google - Lat=' + position.coords.latitude + ", Lon=" + position.coords.longitude);
             var latlng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
 
+            // Center the map on the found location
+            map.panTo(latlng);
+
             var marker = new google.maps.Marker({
                 animation: google.maps.Animation.DROP,
                 map:       map,
                 position:  latlng,
                 title:     'You are here'
             });
+            
         };
 
         var onFail = function() {
